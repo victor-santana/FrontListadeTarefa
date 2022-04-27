@@ -1,0 +1,66 @@
+<div class="to-do-list">
+    <h1 id="tituloConteudo">Minhas Tarefas Diarias</h1>
+    <p id="data"><app-dia></app-dia></p>
+
+    <form (ngSubmit)="addTarefa()">
+    <div class="campoTarefa">
+      <mat-form-field class="example-full-width"  appearance="fill">
+        <mat-label>Digite Aqui Sua Nova Tarefa</mat-label>
+        <input type="text" [(ngModel)]="task.name" id="cadastratTarefa" name="cadastrarTarefa" matInput placeholder="Digite Aqui Sua Nova Tarefa" >
+      </mat-form-field>
+    </div>
+
+    <input id="date" type="datetime-local" [(ngModel)]="task.data" name="casatrarData">
+    <button mat-button id="btnAdd" > <mat-icon mat-icon>add</mat-icon>Adicionar</button>
+  </form>
+  <router-outlet></router-outlet>
+    <div class="Tarefa_a_Realizar">
+      <h3>Tarefas a Realizar</h3>
+
+      <ul class="ulTarefa" *ngFor="let item of listaTarefa">
+
+
+        <li id="linhaT" >
+
+          <p id="nomeDaTarefa">{{item.name}} </p>
+
+          <button mat-mini-fab disabled id="btnInv"></button>
+
+          <button mat-mini-fab (click)="marcar(item.id!)" id="btnConcluido"  color = "primary" ><mat-icon mat-icon>archive</mat-icon></button>
+          <button mat-mini-fab (click)="apaga(item.id!)" id="btnRemove" color = "primary" ><mat-icon mat-icon> delete </mat-icon></button>
+          <a routerLink="/atualiza/{{item.id}}"> <button mat-mini-fab id="btnRemove" color = "primary" ><mat-icon mat-icon> edit </mat-icon></button> </a>
+
+
+          <p id="dataDaTarefa"> {{item.data | date: "medium"}} </p>
+
+
+        </li>
+      </ul>
+
+
+    </div>
+
+    <div class="Tarefa_Realizada">
+      <h3>Tarefas Realizadas</h3>
+      <ul class="ulTarefa">
+        <li id="linhaT" *ngFor="let item of listaTarefa_con">
+
+          <p id="nomeDaTarefa">{{item.name}} </p>
+
+          <button mat-mini-fab disabled id="btnInv"></button>
+
+          <button mat-mini-fab id="btnConcluido" (click)="desmarcar(item.id!)" color = "primary" ><mat-icon mat-icon>unarchive</mat-icon></button>
+          <button mat-mini-fab id="btnRemove" (click)="apaga(item.id!)" color = "primary" ><mat-icon mat-icon> delete </mat-icon></button>
+          <a routerLink="/atualiza/{{item.id}}"> <button mat-mini-fab id="btnRemove" color = "primary" ><mat-icon mat-icon> edit </mat-icon></button> </a>
+          <p id="dataDaTarefa"> {{item.data | date: "medium"}} </p>
+
+        </li>
+      </ul>
+    </div>
+</div>
+
+
+
+
+
+

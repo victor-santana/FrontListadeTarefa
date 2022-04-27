@@ -1,0 +1,23 @@
+<section class="contenerEditar">
+  <form (ngSubmit)="atualizarTarefa()">
+
+    <h2 id="tituloEditar">Editar</h2>
+
+    <mat-form-field appearance="fill" id="campoNovaTarefa">
+      <mat-label>Digite Aqui o Novo Nome</mat-label>
+      <input matInput type="text" id="cadastrarNovaTarefa" name="cadastrarNovaTarefa" [(ngModel)]="task.name">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" id="campoData">
+      <mat-label>Digite Aqui a Nova Data</mat-label>
+      <input matInput id="date" type="datetime-local"[(ngModel)]="task.data" name="casatrarNovaData" >
+    </mat-form-field>
+
+    <div mat-dialog-actions id="btnsEditar">
+      <button mat-button id="btnSalvar" (click)="salvar()"> <mat-icon>save_alt</mat-icon>Salvar</button>
+      <button mat-button id="btnCancelar" (click)="cancel()" > <mat-icon>cancel</mat-icon>Cancelar</button>
+
+    </div>
+  </form>
+</section>
+

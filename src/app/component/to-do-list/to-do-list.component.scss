@@ -1,0 +1,84 @@
+#tituloConteudo{
+  padding-top: 2%;
+  text-align: center;
+  color: black;
+
+}
+.campoTarefa{
+  width: 40%;
+  margin-left: 15%;
+  display: inline-flex;
+}
+
+.example-full-width{
+  width: 20%;
+}
+#btnInv{
+  opacity: 0;
+}
+#data{
+  margin-left: 15%;
+}
+#date{
+  margin-left: 2%;
+}
+#btnAdd{
+  margin-left: 4%;
+  border: solid 1px;
+}
+.example-full-width{
+  width: 100%
+}
+.Tarefa_a_Realizar, .Tarefa_Realizada{
+  margin-right: 13%;
+  margin-left: 13%;
+  padding: 2%;
+}
+
+#linhaT{
+  border-width: 1px;
+  border-style: solid;
+  border-color: black ;
+  border-radius: 10px ;
+  margin: 5px;
+  list-style-type: none;
+  padding: 0.5%;
+
+}
+.changeColor{
+  background-color:rgb(238, 238, 122);
+}
+
+
+#btnImportante{
+  margin: 2px;
+  color: white;
+  float: right;
+}
+#btnConcluido{
+  margin: 2px;
+  color: white;
+  float: right;
+}
+#btnRemove{
+  margin: 2px;
+  color: white;
+  float: right;
+}
+#nomeDaTarefa{
+  margin: 2px;
+  float: left;
+  margin-left: 0%;
+  padding-top: 9px;
+  font-weight: bold;
+
+}
+#dataDaTarefa{
+  margin: 2px;
+  float: right;
+  padding-top: 9px;
+}
+#btnNaoConcluido{
+  margin: 2px;
+  color: red;
+}

@@ -1,0 +1,49 @@
+#divMenu{
+  display: inline-block;
+  width: 25%;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+#ulMenu{
+  list-style: none;
+  width: 100%;
+}
+#imgIconMenu{
+  width: 40px;
+}
+
+#chec{
+  display: none;
+}
+#navMenu{
+  width: 100%;
+  left: 100%;
+  position: relative;
+}
+input[type="checkbox"]:checked ~ nav{
+  transform: translateX(-1490%);
+
+}
+#aMenu{
+  display: block;
+  padding: 20px 5px;
+  color: black;
+}
+#aMenu:hover{
+  background-color: rgb(180, 180, 182);;
+  color: white;
+}
+#lblChec{
+  padding: 15px;
+  position: absolute;
+  top: 12%;
+  right: 0%;
+}
+
+#ulMenu{
+  background-color: rgb(197, 203, 203);
+  position: relative;
+}
